@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <string name="app_name">Voice Assistants</string>
+
+    <string name="accessibility_service_description">
+        Voice Assistants को user द्वारा दिए गए commands के लिए phone navigation और gestures में मदद करता है।
+    </string>
+
+</resources>
