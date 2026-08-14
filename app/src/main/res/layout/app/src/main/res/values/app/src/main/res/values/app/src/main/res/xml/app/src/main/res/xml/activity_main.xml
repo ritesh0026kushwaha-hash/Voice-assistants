@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#080A12">
+
+    <!-- Top bar -->
+
+    <TextView
+        android:id="@+id/appTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Voice Assistants"
+        android:textColor="#FFFFFF"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="28dp"/>
+
+    <TextView
+        android:id="@+id/appSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your AI phone assistant"
+        android:textColor="#8E93A6"
+        android:textSize="13sp"
+        app:layout_constraintTop_toBottomOf="@id/appTitle"
+        app:layout_constraintStart_toStartOf="@id/appTitle"
+        android:layout_marginTop="4dp"/>
+
+    <!-- Status -->
+
+    <TextView
+        android:id="@+id/statusText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="READY"
+        android:textColor="#70F6D2"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="38dp"/>
+
+    <!-- Voice orb -->
+
+    <View
+        android:id="@+id/orbOuter"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:background="@drawable/orb_outer"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="130dp"/>
+
+    <View
+        android:id="@+id/orbInner"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:background="@drawable/orb_inner"
+        app:layout_constraintTop_toTopOf="@id/orbOuter"
+        app:layout_constraintBottom_toBottomOf="@id/orbOuter"
+        app:layout_constraintStart_toStartOf="@id/orbOuter"
+        app:layout_constraintEnd_toEndOf="@id/orbOuter"/>
+
+    <ImageView
+        android:id="@+id/micIcon"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:src="@android:drawable/ic_btn_speak_now"
+        android:tint="#FFFFFF"
+        app:layout_constraintTop_toTopOf="@id/orbInner"
+        app:layout_constraintBottom_toBottomOf="@id/orbInner"
+        app:layout_constraintStart_toStartOf="@id/orbInner"
+        app:layout_constraintEnd_toEndOf="@id/orbInner"/>
+
+    <!-- Assistant message -->
+
+    <TextView
+        android:id="@+id/assistantMessage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Hi Boss 👋\nI'm ready."
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:maxLines="3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/orbOuter"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginTop="-95dp"/>
+
+    <!-- Recognized command -->
+
+    <TextView
+        android:id="@+id/commandText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Say something..."
+        android:textColor="#8E93A6"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:maxLines="2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/assistantMessage"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="10dp"/>
+
+    <!-- Start button -->
+
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="0dp"
+        android:layout_height="58dp"
+        android:text="START ASSISTANT"
+        android:textColor="#080A12"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:backgroundTint="#70F6D2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/stopButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="30dp"/>
+
+    <!-- Stop button -->
+
+    <Button
+        android:id="@+id/stopButton"
+        android:layout_width="0dp"
+        android:layout_height="58dp"
+        android:text="STOP"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:backgroundTint="#202431"
+        app:layout_constraintStart_toEndOf="@id/startButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="30dp"/>
+
+    <!-- Phone control -->
+
+    <Button
+        android:id="@+id/accessibilityButton"
+        android:layout_width="wrap_content"
+        android:layout_height="42dp"
+        android:text="PHONE CONTROL"
+        android:textSize="11sp"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#171A25"
+        app:layout_constraintBottom_toTopOf="@id/startButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="12dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
