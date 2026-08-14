@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Voice Assistants"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="10dp" />
+
+        <TextView
+            android:id="@+id/statusText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Assistant stopped"
+            android:textSize="17sp"
+            android:gravity="center"
+            android:layout_marginBottom="25dp" />
+
+        <Button
+            android:id="@+id/startButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="START VOICE ASSISTANT" />
+
+        <Button
+            android:id="@+id/stopButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="STOP ASSISTANT" />
+
+        <Button
+            android:id="@+id/accessibilityButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ENABLE PHONE CONTROL" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="Try saying:
+
+YouTube खोलो
+WhatsApp खोलो
+Chrome खोलो
+Settings खोलो
+WiFi settings खोलो
+Bluetooth खोलो
+Volume बढ़ाओ
+Volume कम करो
+Home
+Back
+Recent apps
+Call 9876543210"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+</ScrollView>
